@@ -1,0 +1,15 @@
+<div id="lang-select">
+  <div class="lang-box">
+    <label *ngIf="langCode === 'ko'">🇰🇷 선택됨</label>
+    <label *ngIf="langCode === 'en'">🇺🇸 선택됨</label>
+ 
+    <button type="button" 
+    (click)="setLangCode('ko')"
+    [disabled]="langCode === 'ko'">한국어</button>
+    <button type="button" 
+      (click)="setLangCode('en')"
+      [disabled]="langCode === 'en'">영어</button>
+    
+  </div>
+
+</div>
