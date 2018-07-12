@@ -8,7 +8,7 @@ import { I18nSupportService } from '../i18n-support.service';
 })
 export class WelcomeMsgComponent {
   userName = '';
-  welcomeMsg = 'test';
+  welcomeMsg = '';
   private vaild = false;
   private static CHK_KEYUP_WAIT_SEC = 5000;
 
@@ -29,7 +29,7 @@ export class WelcomeMsgComponent {
   }
 
   showWelcomeMsg() {
-    this.welcomeMsg = this.i18nSupportService.getWelcomeMsgByCode(this.userName, 'ko');
+    this.welcomeMsg = this.i18nSupportService.getWelcomeMsgByCode(this.userName);
   }
 }
 
